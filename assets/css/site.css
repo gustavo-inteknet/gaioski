@@ -587,3 +587,62 @@ h2 em, .contact h2 em { font-style: normal; color: var(--ink-3); }
   .hop details ul { transform: none !important; }
   ::view-transition-group(*) { animation: none; }
 }
+
+/* =====================================================================
+   Ilustração e ícones
+   ===================================================================== */
+
+/* topologia de rede atrás da abertura: o hub fica sob o retrato */
+.hero::before {
+  content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  background: url("../img/hero-net.svg") center top / 1440px auto no-repeat;
+  -webkit-mask-image: linear-gradient(90deg, transparent 42%, #000 64%), linear-gradient(#000 72%, transparent 96%);
+  -webkit-mask-composite: source-in;
+  mask-image: linear-gradient(90deg, transparent 42%, #000 64%), linear-gradient(#000 72%, transparent 96%);
+  mask-composite: intersect;
+  animation: fade-in 1.4s .4s var(--ease-out) both;
+}
+@media (max-width: 860px) {
+  .hero::before {
+    background-position: center bottom; background-size: 980px auto; opacity: .7;
+    -webkit-mask-image: linear-gradient(transparent 38%, #000 70%, transparent 98%);
+    mask-image: linear-gradient(transparent 38%, #000 70%, transparent 98%);
+  }
+}
+
+.icon { width: 1.25em; height: 1.25em; flex: none; vertical-align: -.2em; }
+
+/* ícones das frentes em ladrilho com borda em degradê */
+.area__head { display: flex; justify-content: space-between; align-items: center; margin-bottom: .2rem; }
+.area__icon {
+  display: inline-grid; place-items: center; width: 3.1rem; height: 3.1rem; border-radius: 12px;
+  color: var(--accent-soft);
+  border: 1px solid transparent;
+  background: linear-gradient(160deg, color-mix(in srgb, var(--accent-deep) 24%, #1a1f28), #161a20) padding-box, var(--grad-edge-hover) border-box;
+  box-shadow: 0 10px 22px -12px rgb(0 0 0 / .75), inset 0 1px 0 rgb(255 255 255 / .06);
+  transition: color .25s, box-shadow .3s var(--ease-out);
+}
+.area__icon .icon { width: 1.55rem; height: 1.55rem; }
+.area:hover .area__icon { color: #fff; box-shadow: 0 14px 26px -12px rgb(0 0 0 / .85), inset 0 1px 0 rgb(255 255 255 / .1); }
+
+/* ícones dos casos, junto da categoria */
+.case__tag span:first-child { display: inline-flex; align-items: center; gap: .6rem; }
+.case__tag .icon { width: 1.4rem; height: 1.4rem; color: var(--accent); }
+.case.case--feature .case__tag .icon { width: 1.7rem; height: 1.7rem; color: var(--accent-soft); }
+
+/* setas de link */
+.link-arrow, .case a { display: inline-flex; align-items: center; gap: .4rem; }
+.link-arrow .icon, .case a .icon { width: 1em; height: 1em; transition: transform .25s var(--ease-out); }
+.link-arrow:hover .icon { transform: translateY(3px); }
+.case:hover a .icon { transform: translateX(4px); }
+
+/* links de contato com ícone */
+.contact__links a { display: inline-flex; align-items: center; gap: .55rem; }
+.contact__links .icon { width: 1.15rem; height: 1.15rem; }
+.contact__links .icon--ext { width: .85rem; height: .85rem; opacity: .55; transition: transform .25s var(--ease-out), opacity .2s; }
+.contact__links a:hover .icon--ext { transform: translate(2px, -2px); opacity: 1; }
+
+@media (prefers-reduced-motion: reduce) {
+  .hero::before { animation: fade-in .4s ease-out both; }
+  .link-arrow:hover .icon, .case:hover a .icon, .contact__links a:hover .icon--ext { transform: none; }
+}
