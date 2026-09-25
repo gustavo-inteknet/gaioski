@@ -77,7 +77,8 @@ else fail('404.html', 'arquivo não existe');
 
 const css = existsSync(join(root, 'assets/css/site.css')) ? read('assets/css/site.css') : '';
 if (!css) fail('assets/css/site.css', 'arquivo não existe');
-for (const [, u] of css.matchAll(/url\(["']?([^"')]+)["']?\)/g)) {
+const cssNoData = css.replace(/url\("data:[^"]*"\)/g, '');
+for (const [, u] of cssNoData.matchAll(/url\(["']?([^"')]+)["']?\)/g)) {
   if (/^https?:/.test(u)) fail('site.css', `url externa: ${u}`);
   else if (!u.startsWith('data:') && !existsSync(join(root, 'assets/css', u))) fail('site.css', `url inexistente: ${u}`);
 }
