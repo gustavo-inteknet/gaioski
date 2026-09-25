@@ -72,12 +72,11 @@
 
   <main id="conteudo">
     <div class="hero">
-      <div class="wrap">
+      <div class="wrap hero__grid">
         <div>
           <p class="hero__kicker">
             <span class="dot">CCO na IntekNet</span>
-            <span>Curitiba, PR</span>
-            <span>desde 2015 na mesma operação</span>
+            <span>Infraestrutura · Microsoft 365 · Segurança</span>
           </p>
           <h1>Gustavo <span>Gaioski</span></h1>
           <p class="hero__lede">Tecnologia que sustenta a operação. <em>Não a que depende de sorte.</em></p>
@@ -96,6 +95,14 @@
           <figcaption><span>fig. 01</span><span>Curitiba, 2026</span></figcaption>
         </figure>
       </div>
+      <div class="wrap">
+        <dl class="readout" aria-label="Resumo">
+          <div><dt>uptime</dt><dd>11 anos<small>na IntekNet</small></dd></div>
+          <div><dt>saltos</dt><dd>6 cargos<small>2015 → hoje</small></dd></div>
+          <div><dt>base</dt><dd>Curitiba<small>PR, Brasil</small></dd></div>
+          <div><dt>certificações</dt><dd>10<small>4 emissores</small></dd></div>
+        </dl>
+      </div>
     </div>
 
     <section id="sobre" aria-labelledby="sobre-t">
@@ -111,11 +118,7 @@
             <p>Comecei em 2015 como estagiário de suporte, atendendo chamado de impressora e criando usuário no Active Directory. Onze anos depois continuo na mesma empresa, a IntekNet, agora como CCO. No meio do caminho passei por servidores, redes, firewall e Microsoft 365, e nos últimos anos pela gestão do time que cuida de tudo isso.</p>
             <p>O que esse percurso me ensinou é que quase nenhum problema de TI é só técnico. O arquivo que não abre no OneDrive é arquitetura da informação. O backup que falha na restauração é falta de uma segunda camada. A pessoa que passa o primeiro dia esperando acesso é processo. Gosto de achar a causa antes de trocar a peça.</p>
             <p>Hoje divido o tempo entre a operação, os clientes e uma frente que me anima bastante: usar IA e automação para tirar trabalho manual do caminho do time e dar números melhores para quem decide.</p>
-            <dl class="facts">
-              <div><dt>Na IntekNet</dt><dd>11 anos</dd></div>
-              <div><dt>Cargos</dt><dd>6 saltos</dd></div>
-              <div><dt>Certificações</dt><dd>10</dd></div>
-            </dl>
+            <p class="signature"><img src="/assets/img/gustavo-480.webp" width="52" height="52" alt="Foto de Gustavo Gaioski" loading="lazy"><span><strong>Gustavo Gaioski</strong><span>CCO · IntekNet</span></span></p>
           </div>
         </div>
       </div>
@@ -244,7 +247,10 @@
     <section id="atuacao" aria-labelledby="atuacao-t">
       <div class="wrap">
         <p class="label"><b>03</b> O que eu faço</p>
-        <h2 id="atuacao-t">Quatro frentes, <em>um mesmo objetivo:</em> previsibilidade.</h2>
+        <div class="section-head">
+          <h2 id="atuacao-t">Quatro frentes, <em>um mesmo objetivo:</em> previsibilidade.</h2>
+          <p>Onde passo a maior parte do tempo, com as ferramentas que uso de verdade no dia a dia.</p>
+        </div>
         <div class="areas">
           <article class="area">
             <span class="area__n">3.1</span>
@@ -279,12 +285,14 @@
         <p class="label"><b>04</b> Casos de campo</p>
         <h2 id="casos-t">Histórias reais, <em>sem nome de cliente.</em></h2>
         <div class="cases">
-          <article class="case">
+          <article class="case case--feature">
             <p class="case__tag"><span>Continuidade</span><span>01</span></p>
             <h3>O backup que falhou na hora H</h3>
-            <p>O monitoramento avisou que um disco ia falhar. A troca foi adiada, o disco morreu e a restauração do backup, testado todo mês, não funcionou. Quem salvou o dia foi um segundo backup, em outra ferramenta.</p>
-            <p class="case__lesson">Um backup só é aposta. Redundância é ter camadas que não dependem uma da outra.</p>
-            <a href="https://www.linkedin.com/feed/update/urn:li:activity:7509213831177326592/" rel="noopener" target="_blank">ler no LinkedIn &rarr;</a>
+            <div class="case__body">
+              <p>O monitoramento avisou que um disco ia falhar. A troca foi adiada, o disco morreu e a restauração do backup, testado todo mês, não funcionou. Quem salvou o dia foi um segundo backup, em outra ferramenta.</p>
+              <p class="case__lesson">Um backup só é aposta. Redundância é ter camadas que não dependem uma da outra.</p>
+              <a href="https://www.linkedin.com/feed/update/urn:li:activity:7509213831177326592/" rel="noopener" target="_blank">ler no LinkedIn &rarr;</a>
+            </div>
           </article>
           <article class="case">
             <p class="case__tag"><span>Microsoft 365</span><span>02</span></p>
@@ -349,12 +357,26 @@
     <section id="contato" class="contact" aria-labelledby="contato-t">
       <div class="wrap">
         <p class="label"><b>06</b> Contato</p>
-        <h2 id="contato-t">Vamos conversar <em>sobre a sua operação?</em></h2>
-        <a class="contact__mail" href="mailto:contato@gaioski.com.br">contato@gaioski.com.br</a>
-        <ul class="contact__links">
-          <li><a href="https://www.linkedin.com/in/gustavo-gaioski/" rel="me noopener" target="_blank">LinkedIn &nearr;</a></li>
-          <li><a href="https://inteknet.com.br/" rel="noopener" target="_blank">IntekNet &nearr;</a></li>
-        </ul>
+        <div class="contact__grid">
+          <div>
+            <h2 id="contato-t">Vamos conversar <em>sobre a sua operação?</em></h2>
+            <a class="contact__mail" href="mailto:contato@gaioski.com.br">contato@gaioski.com.br</a>
+            <ul class="contact__links">
+              <li><a href="https://www.linkedin.com/in/gustavo-gaioski/" rel="me noopener" target="_blank">LinkedIn &nearr;</a></li>
+              <li><a href="https://inteknet.com.br/" rel="noopener" target="_blank">IntekNet &nearr;</a></li>
+            </ul>
+          </div>
+          <aside class="topics">
+            <h3>Bons assuntos para começar</h3>
+            <ol>
+              <li>Infraestrutura e redes</li>
+              <li>Microsoft 365 e migrações</li>
+              <li>Segurança e continuidade</li>
+              <li>Liderança de times técnicos</li>
+              <li>IA aplicada à operação</li>
+            </ol>
+          </aside>
+        </div>
       </div>
     </section>
   </main>
@@ -363,6 +385,7 @@
     <div class="wrap">
       <span>&copy; 2026 Gustavo Gaioski · Curitiba, PR</span>
       <span>Feito à mão. Sem cookies, sem rastreadores.</span>
+      <a href="#conteudo">voltar ao topo &uarr;</a>
     </div>
   </footer>
 </body>
