@@ -20,6 +20,15 @@
   --ink-3: #8a867f;
   --accent: #7ea4ff;
   --accent-ink: #0e1420;
+  --accent-deep: #3d6fe0;   /* azul do logo */
+  --accent-soft: #a9c3ff;
+
+  /* degradês */
+  --grad-accent: linear-gradient(135deg, var(--accent-soft), var(--accent) 45%, var(--accent-deep));
+  --grad-edge: linear-gradient(140deg, color-mix(in srgb, var(--accent) 55%, transparent), var(--line) 38%, var(--line) 70%, color-mix(in srgb, var(--accent-deep) 35%, transparent));
+  --grad-edge-hover: linear-gradient(140deg, var(--accent), color-mix(in srgb, var(--accent) 25%, var(--line)) 45%, var(--accent-deep));
+  --grad-card: linear-gradient(165deg, #1d222b, #181c23 60%, #161a20);
+  --grad-rule: linear-gradient(90deg, transparent, var(--line-2) 12%, var(--line-2) 88%, transparent);
 
   --serif: "Newsreader", "Iowan Old Style", Georgia, serif;
   --sans: "Plex Sans", "Segoe UI", system-ui, sans-serif;
@@ -342,6 +351,160 @@ p { margin: 0 0 1.1em; }
 .notfound { min-height: 70vh; display: grid; align-content: center; }
 .notfound h1 { font-size: clamp(3rem, 9vw, 6.5rem); line-height: .95; margin: 1.5rem 0 1.5rem; }
 .notfound p { color: var(--ink-2); max-width: 44ch; }
+
+/* =====================================================================
+   Acabamento: bordas e degradês
+   Técnica de borda em degradê: borda transparente + dois fundos
+   (padding-box com a cor do elemento, border-box com o degradê).
+   ===================================================================== */
+
+/* atmosfera da página: brilho azul no topo e malha de rede sutil */
+body {
+  background:
+    radial-gradient(1200px 620px at 78% -8%, color-mix(in srgb, var(--accent-deep) 22%, transparent), transparent 62%),
+    radial-gradient(900px 520px at -10% 38%, color-mix(in srgb, var(--accent) 7%, transparent), transparent 60%),
+    var(--bg);
+  background-repeat: no-repeat;
+}
+.hero { position: relative; isolation: isolate; }
+.hero::before {
+  content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  background-image:
+    linear-gradient(to right, rgb(255 255 255 / .035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(255 255 255 / .035) 1px, transparent 1px);
+  background-size: 64px 64px;
+  -webkit-mask-image: radial-gradient(ellipse 70% 80% at 70% 30%, #000 20%, transparent 75%);
+  mask-image: radial-gradient(ellipse 70% 80% at 70% 30%, #000 20%, transparent 75%);
+}
+
+/* nome com degradê suave de tinta; o sobrenome em itálico ganha o azul */
+.hero h1 {
+  background: linear-gradient(180deg, #f6f2ea 30%, #c9c3b8);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.hero h1 span {
+  background: linear-gradient(100deg, var(--ink-2) 10%, color-mix(in srgb, var(--accent) 70%, var(--ink-2)) 90%);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.hero__lede em {
+  background: var(--grad-accent);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+
+/* retrato: moldura com borda em degradê e halo */
+.portrait__frame {
+  border: 1px solid transparent;
+  background: linear-gradient(#262b33, #262b33) padding-box, var(--grad-edge-hover) border-box;
+  border-radius: 10px;
+  box-shadow: 0 40px 80px -30px rgb(0 0 0 / .7), 0 0 0 1px rgb(0 0 0 / .2);
+}
+.portrait__frame::after { border-radius: 9px; }
+.portrait__frame img { border-radius: 9px; }
+.portrait::before {
+  border: 1px solid transparent; border-radius: 12px;
+  background: linear-gradient(var(--bg), var(--bg)) padding-box, var(--grad-edge) border-box;
+}
+.portrait::after {
+  content: ""; position: absolute; z-index: -2; inset: 12% -8% 18% -8%;
+  background: radial-gradient(closest-side, color-mix(in srgb, var(--accent-deep) 38%, transparent), transparent);
+  filter: blur(30px); pointer-events: none;
+}
+
+/* botões e seletor de idioma */
+.btn {
+  background: linear-gradient(180deg, #f6f2ea, #dcd6cb);
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / .6), 0 10px 24px -12px rgb(0 0 0 / .8);
+}
+.btn:hover { background: var(--grad-accent); color: var(--accent-ink); }
+.lang {
+  border: 1px solid transparent;
+  background: linear-gradient(var(--bg), var(--bg)) padding-box, var(--grad-edge) border-box;
+}
+
+/* rótulos e divisórias que esmaecem nas pontas */
+.label::after { background: linear-gradient(90deg, color-mix(in srgb, var(--accent) 45%, var(--line)), var(--line) 30%, transparent); }
+.hop::after { background: linear-gradient(90deg, var(--line-2), var(--line) 70%, transparent); }
+.contact, .foot { border-top: 0; position: relative; }
+.contact::before, .foot::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: var(--grad-rule); }
+
+/* faixas de seção: degradê vertical que alterna o tom do fundo */
+#rota, #casos {
+  background: linear-gradient(180deg, transparent, color-mix(in srgb, var(--bg-2) 80%, transparent) 18%, color-mix(in srgb, var(--bg-2) 80%, transparent) 82%, transparent);
+}
+#contato {
+  background: radial-gradient(900px 420px at 85% 100%, color-mix(in srgb, var(--accent-deep) 16%, transparent), transparent 70%);
+}
+
+/* faixa de leitura como painel com borda em degradê */
+.readout {
+  border: 1px solid transparent; border-radius: 12px;
+  background: var(--grad-card) padding-box, var(--grad-edge) border-box;
+  overflow: hidden;
+}
+.readout div { padding: 1.3rem 1.5rem 1.4rem; }
+.readout div + div { padding-left: 1.5rem; border-left: 0; background: linear-gradient(var(--line), var(--line)) left center / 1px 60% no-repeat; }
+@media (max-width: 760px) {
+  .readout div:nth-child(3) { padding-left: 1.5rem; background: none; }
+  .readout div:nth-child(n+3) { border-top: 1px solid var(--line); }
+}
+
+/* áreas de atuação: cartões com borda em degradê no lugar da grade de linhas */
+.areas { border-top: 0; gap: clamp(1rem, 2vw, 1.4rem); }
+.area, .area:nth-child(odd), .area:nth-child(even) {
+  padding: clamp(1.6rem, 3vw, 2.3rem);
+  border: 1px solid transparent; border-radius: 12px;
+  background: var(--grad-card) padding-box, linear-gradient(140deg, var(--line-2), var(--line) 50%, var(--line-2)) border-box;
+  transition: background .3s, transform .3s var(--ease);
+}
+.area:hover {
+  background: var(--grad-card) padding-box, var(--grad-edge-hover) border-box;
+  transform: translateY(-2px);
+}
+.stack li { border-radius: 99px; border-color: var(--line-2); background: rgb(255 255 255 / .02); }
+@media (max-width: 760px) { .area, .area:nth-child(even) { padding: 1.6rem; } }
+
+/* casos */
+.case {
+  border: 1px solid transparent; border-radius: 12px;
+  background: var(--grad-card) padding-box, linear-gradient(140deg, var(--line-2), var(--line) 50%, var(--line-2)) border-box;
+}
+.case:hover { background: var(--grad-card) padding-box, var(--grad-edge-hover) border-box; }
+.case.case--feature, .case.case--feature:hover {
+  background:
+    radial-gradient(700px 320px at 0% 0%, color-mix(in srgb, var(--accent-deep) 20%, transparent), transparent 70%) padding-box,
+    var(--grad-card) padding-box,
+    var(--grad-edge-hover) border-box;
+}
+.case__lesson { border-top: 0; position: relative; }
+.case__lesson::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, var(--accent), var(--line-2) 35%, transparent); opacity: .7; }
+
+/* formação: tabela e cursos dentro de painéis */
+.edu { align-items: start; }
+.edu > div {
+  border: 1px solid transparent; border-radius: 12px; padding: clamp(1.4rem, 3vw, 2rem);
+  background: var(--grad-card) padding-box, linear-gradient(140deg, var(--line-2), var(--line) 50%, var(--line-2)) border-box;
+}
+.degrees li:first-child { border-top: 0; padding-top: 0; }
+.certs tr:last-child td { border-bottom: 0; }
+
+/* contato */
+.contact__mail {
+  text-decoration: none;
+  background: var(--grad-accent) left bottom / 100% 2px no-repeat;
+  padding-bottom: .12em;
+  transition: background-size .3s var(--ease);
+}
+.contact__mail:hover { color: var(--accent-soft); background-size: 100% 3px; }
+.topics {
+  border: 1px solid transparent; border-radius: 12px; padding: clamp(1.4rem, 3vw, 2rem);
+  background: var(--grad-card) padding-box, var(--grad-edge) border-box;
+}
+@media (max-width: 860px) { .topics { border-top: 1px solid transparent; padding-top: 1.4rem; padding-left: 1.4rem; } }
+
+/* topo com linha em degradê quando rola */
+.top { border-bottom: 0; }
+.top::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 1px; background: var(--grad-rule); opacity: 0; transition: opacity .3s; }
+.top.is-scrolled::after { opacity: 1; }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
