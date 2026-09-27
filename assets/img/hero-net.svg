@@ -1,19 +1,19 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 820" preserveAspectRatio="xMidYMin slice">
   <!-- Topologia de rede: o hub (retrato) recebe pacotes da malha. Decorativo. -->
   <style>
-    .mesh { stroke: #373d48; stroke-width: 1; }
-    .spoke { stroke: #2563ff; stroke-opacity: .55; stroke-width: 1.2; }
+    .mesh { stroke: #22496c; stroke-width: 1; }
+    .spoke { stroke: #b9915b; stroke-opacity: .6; stroke-width: 1.2; }
     .route { fill: none; stroke: none; }
-    .n { fill: #14171c; stroke: #4a5160; stroke-width: 1.2; }
-    .m { fill: #14171c; stroke: #4a8cff; stroke-width: 1.4; }
-    .hub { fill: none; stroke: #4a8cff; stroke-opacity: .35; }
-    .pk { fill: #94bbff; }
+    .n { fill: #001f35; stroke: #3b6384; stroke-width: 1.2; }
+    .m { fill: #001f35; stroke: #c9a96e; stroke-width: 1.4; }
+    .hub { fill: none; stroke: #c9a96e; stroke-opacity: .35; }
+    .pk { fill: #e2cda4; }
     @media (prefers-reduced-motion: reduce) { .pk { display: none; } }
   </style>
   <defs>
     <radialGradient id="glow" cx="50%" cy="50%" r="50%">
-      <stop offset="0" stop-color="#2563ff" stop-opacity=".22"/>
-      <stop offset="1" stop-color="#2563ff" stop-opacity="0"/>
+      <stop offset="0" stop-color="#977342" stop-opacity=".28"/>
+      <stop offset="1" stop-color="#977342" stop-opacity="0"/>
     </radialGradient>
   </defs>
   <circle cx="1090" cy="380" r="420" fill="url(#glow)"/>
