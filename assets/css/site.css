@@ -734,3 +734,19 @@ body {
 .readout dd { font-weight: 300; }
 .readout dt::before, .hero__kicker .dot::before { background: var(--grad-gold); }
 .facts dd, .readout dd small { color: var(--ink-3); }
+
+/* casos: situação → o que fizemos → resultado */
+.star { margin: 0 0 1.2rem; display: grid; gap: .15rem; }
+.star dt { font: 500 .75rem var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--accent); margin-top: .7rem; }
+.star dt:first-child { margin-top: 0; }
+.star dd { margin: .2rem 0 0; color: var(--ink-2); font-size: .975rem; line-height: 1.55; }
+.star .star__result { color: var(--ink); font-weight: 500; }
+.case.case--feature .star dd { color: color-mix(in srgb, var(--accent-soft) 18%, var(--ink-2)); }
+.case.case--feature .star .star__result { color: var(--ink); }
+
+/* certificações expiradas: ficam no histórico, sinalizadas */
+.cert-exp {
+  display: inline-block; margin-left: .45rem; vertical-align: .1em;
+  font: 400 .75rem var(--mono); color: var(--ink-3);
+  border: 1px solid var(--line-2); border-radius: 99px; padding: 0 .5rem;
+}
