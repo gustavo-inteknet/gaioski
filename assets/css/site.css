@@ -750,3 +750,21 @@ body {
   font: 400 .75rem var(--mono); color: var(--ink-3);
   border: 1px solid var(--line-2); border-radius: 99px; padding: 0 .5rem;
 }
+
+/* frente de liderança: cartão largo em destaque no topo da grade */
+.area.area--wide {
+  grid-column: 1 / -1;
+  display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 0 clamp(2rem, 5vw, 4rem); align-items: end;
+  background:
+    radial-gradient(620px 260px at 0% 0%, color-mix(in srgb, var(--accent-deep) 16%, transparent), transparent 70%) padding-box,
+    var(--grad-card) padding-box,
+    var(--grad-edge-hover) border-box;
+}
+.area--wide .area__head { grid-column: 1 / -1; }
+.area--wide h3 { font-size: clamp(1.7rem, 3vw, 2.4rem); }
+.area--wide p { max-width: 56ch; margin-bottom: 0; }
+.area--wide .stack { margin: 0; align-self: end; }
+@media (max-width: 860px) {
+  .area.area--wide { grid-template-columns: 1fr; }
+  .area--wide .stack { margin-top: 1.3rem; }
+}
