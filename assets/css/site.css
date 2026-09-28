@@ -768,3 +768,9 @@ body {
   .area.area--wide { grid-template-columns: 1fr; }
   .area--wide .stack { margin-top: 1.3rem; }
 }
+
+/* números de resultado dentro do cartão de liderança */
+.area__stats { display: flex; flex-wrap: wrap; gap: 1rem 2.4rem; margin: 1.4rem 0 0; padding-top: 1.2rem; border-top: 1px solid var(--line); }
+.area__stats div { display: flex; flex-direction: column-reverse; }
+.area__stats dd { margin: 0; font: 300 clamp(2rem, 3.4vw, 2.6rem)/1 var(--sans); letter-spacing: -.03em; color: var(--accent); font-variant-numeric: tabular-nums; }
+.area__stats dt { margin-top: .35rem; font: 400 .75rem var(--mono); letter-spacing: .06em; color: var(--ink-3); }
