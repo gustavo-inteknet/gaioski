@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; font-src 'self'; script-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Uma conta de Dropbox para a empresa toda: o caso de uma construtora · Gustavo Gaioski</title>
+  <meta name="description" content="Uma construtora trabalhava com uma única conta de Dropbox e a mesma senha para todos. Como Microsoft 365 com Intune devolveu o controle sobre os projetos.">
+  <link rel="canonical" href="https://gaioski.com.br/artigos/dropbox-compartilhado-construtora-microsoft-365/">
+  <link rel="alternate" hreflang="pt-BR" href="https://gaioski.com.br/artigos/dropbox-compartilhado-construtora-microsoft-365/">
+  <link rel="alternate" hreflang="en" href="https://gaioski.com.br/en/">
+  <link rel="alternate" hreflang="x-default" href="https://gaioski.com.br/artigos/dropbox-compartilhado-construtora-microsoft-365/">
+  <meta name="theme-color" content="#001f35">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="/assets/fonts/manrope-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/manrope-latin-300-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:url" content="https://gaioski.com.br/artigos/dropbox-compartilhado-construtora-microsoft-365/">
+  <meta property="og:title" content="Uma conta de Dropbox para a empresa toda: o caso de uma construtora · Gustavo Gaioski">
+  <meta property="og:description" content="Uma construtora trabalhava com uma única conta de Dropbox e a mesma senha para todos. Como Microsoft 365 com Intune devolveu o controle sobre os projetos.">
+  <meta property="og:image" content="https://gaioski.com.br/assets/img/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Uma conta de Dropbox para a empresa toda: o caso de uma construtora",
+    "description": "Uma construtora trabalhava com uma única conta de Dropbox e a mesma senha para todos. Como Microsoft 365 com Intune devolveu o controle sobre os projetos.",
+    "datePublished": "2026-08-14",
+    "inLanguage": "pt-BR",
+    "mainEntityOfPage": "https://gaioski.com.br/artigos/dropbox-compartilhado-construtora-microsoft-365/",
+    "url": "https://gaioski.com.br/artigos/dropbox-compartilhado-construtora-microsoft-365/",
+    "image": "https://gaioski.com.br/assets/img/og-image.jpg",
+    "author": {
+      "@type": "Person",
+      "name": "Gustavo Gaioski",
+      "url": "https://gaioski.com.br/",
+      "jobTitle": "Chief Commercial Officer (CCO)",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "IntekNet",
+        "url": "https://inteknet.com.br/"
+      }
+    },
+    "publisher": {
+      "@type": "Person",
+      "name": "Gustavo Gaioski",
+      "url": "https://gaioski.com.br/",
+      "jobTitle": "Chief Commercial Officer (CCO)",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "IntekNet",
+        "url": "https://inteknet.com.br/"
+      }
+    },
+    "sameAs": [
+      "https://www.linkedin.com/feed/update/urn:li:activity:7493984785812340737/"
+    ]
+  }
+  </script>
+  <script src="/assets/js/site.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="top">
+    <div class="wrap">
+      <a class="brand" href="/" aria-label="Gustavo Gaioski, início">gaioski<span>.</span></a>
+      <nav class="nav" aria-label="Seções">
+        <a href="/#sobre">Sobre</a>
+        <a href="/#rota">Rota</a>
+        <a href="/#atuacao">Atuação</a>
+        <a href="/artigos/" aria-current="page">Artigos</a>
+        <a href="/#contato">Contato</a>
+      </nav>
+      <div class="lang" role="group" aria-label="Idioma">
+        <span aria-current="true" lang="pt-BR">PT</span>
+        <a href="/en/" hreflang="en" lang="en">EN</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <article class="post">
+      <div class="wrap">
+        <header class="post__head">
+          <p class="post__meta"><a href="/artigos/">Artigos</a><span>Segurança</span><time datetime="2026-08-14">14 de agosto de 2026</time></p>
+          <h1>Uma conta de Dropbox para a empresa toda: o caso de uma construtora</h1>
+          <p class="post__lede">Uma construtora trabalhava com uma única conta de Dropbox e a mesma senha para todos. Como Microsoft 365 com Intune devolveu o controle sobre os projetos.</p>
+        </header>
+        <div class="post__body">
+          <p>Uma construtora inteira trabalhava com uma única conta de Dropbox. A mesma senha, na mão de todo mundo.</p>
+          <p>Funcionava pra trocar arquivo rápido. Até começar a dar errado. Projeto vazando. Arquivo sigiloso na mão de quem não devia. E ninguém conseguia dizer quem tinha acessado o quê, nem quando.</p>
+          <p>Numa construtora, isso não é problema de TI. É concorrente vendo sua planta antes de a obra sair do papel.</p>
+          <p>Quando assumimos, trocamos aquilo por Microsoft 365 com Intune. Na prática:</p>
+          <ul>
+            <li>Cada setor e cada projeto ganhou a sua permissão, e quem não é do projeto não enxerga o projeto.</li>
+            <li>Os arquivos ficaram presos ao computador corporativo, sem copiar pra um pendrive nem mandar pra fora.</li>
+            <li>E o acesso virou da empresa, não da pessoa.</li>
+          </ul>
+          <p>O teste de fogo veio com a equipe remota. No dia em que um colaborador foi desligado, o acesso aos dados corporativos foi revogado em segundos. Sem visita técnica, sem correr atrás do notebook. Sem torcer pra ele &quot;apagar depois&quot;.</p>
+          <p>O problema nunca foi o Dropbox. Dropbox é ótimo pra muita coisa. O problema é dado de empresa morando numa conta compartilhada, sem dono e sem controle. Quando vaza, não tem volta.</p>
+          <p>Na sua empresa: se um funcionário sair amanhã, os arquivos vão embora com ele ou ficam com a empresa?</p>
+        </div>
+        <footer class="post__foot">
+          <p class="signature"><img src="/assets/img/gustavo-480.webp" width="52" height="52" alt="Foto de Gustavo Gaioski" loading="lazy"><span><strong>Gustavo Gaioski</strong><span>CCO · IntekNet</span></span></p>
+          <div class="post__links">
+            <a href="https://www.linkedin.com/feed/update/urn:li:activity:7493984785812340737/" rel="noopener" target="_blank"><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/img/icons.svg?v=2#linkedin"/></svg>Publicado originalmente no LinkedIn<svg class="icon icon--ext" aria-hidden="true" focusable="false"><use href="/assets/img/icons.svg?v=2#arrow-up-right"/></svg></a>
+            <a class="btn" href="/#contato">Vamos conversar</a>
+          </div>
+        </footer>
+      </div>
+    </article>
+
+    <section class="post-more" aria-labelledby="mais-t">
+      <div class="wrap">
+        <p class="label"><b>+</b> Continue lendo</p>
+        <h2 id="mais-t" class="visually-hidden">Outros artigos</h2>
+        <ul class="post-list post-list--compact">
+          <li class="post-card">
+            <p class="post-card__meta"><span>Segurança</span><time datetime="2026-10-02">2 de outubro de 2026</time></p>
+            <h3><a href="/artigos/travar-tudo-nao-e-seguranca/">Travar tudo não é segurança: mapeie o ambiente antes de restringir</a></h3>
+            <p>A gestão pediu para travar tudo e a empresa parou. Por que restrição de acesso só funciona depois de mapear o que cada área e cada sistema precisa.</p>
+          </li>
+          <li class="post-card">
+            <p class="post-card__meta"><span>Segurança</span><time datetime="2026-09-30">30 de setembro de 2026</time></p>
+            <h3><a href="/artigos/cofre-de-senhas-corporativo/">A senha que abre a empresa inteira: por que usar um cofre de senhas corporativo</a></h3>
+            <p>Senha repetida e post-it não são preguiça, são falta de ferramenta. Como um cofre de senhas corporativo devolve controle, rastreabilidade e desligamento seguro.</p>
+          </li>
+          <li class="post-card">
+            <p class="post-card__meta"><span>Segurança</span><time datetime="2026-09-10">10 de setembro de 2026</time></p>
+            <h3><a href="/artigos/shadow-it-arquivos-da-empresa/">Shadow IT: quando os arquivos da empresa moram onde não deveriam</a></h3>
+            <p>Contrato no WhatsApp, planilha no pendrive, arquivo no Gmail pessoal. O que é Shadow IT, o risco para a empresa e por que ter Microsoft 365 não basta.</p>
+          </li>
+        </ul>
+        <p class="post-more__all"><a class="link-arrow" href="/artigos/">ver todos os artigos<svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/img/icons.svg?v=2#arrow-right"/></svg></a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap">
+      <span>&copy; 2026 Gustavo Gaioski · Curitiba, PR</span>
+      <span>Feito à mão. Sem cookies, sem rastreadores.</span>
+      <a href="#conteudo">voltar ao topo &uarr;</a>
+    </div>
+  </footer>
+</body>
+</html>

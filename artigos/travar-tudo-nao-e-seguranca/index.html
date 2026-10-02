@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; font-src 'self'; script-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Travar tudo não é segurança: mapeie o ambiente antes de restringir · Gustavo Gaioski</title>
+  <meta name="description" content="A gestão pediu para travar tudo e a empresa parou. Por que restrição de acesso só funciona depois de mapear o que cada área e cada sistema precisa.">
+  <link rel="canonical" href="https://gaioski.com.br/artigos/travar-tudo-nao-e-seguranca/">
+  <link rel="alternate" hreflang="pt-BR" href="https://gaioski.com.br/artigos/travar-tudo-nao-e-seguranca/">
+  <link rel="alternate" hreflang="en" href="https://gaioski.com.br/en/">
+  <link rel="alternate" hreflang="x-default" href="https://gaioski.com.br/artigos/travar-tudo-nao-e-seguranca/">
+  <meta name="theme-color" content="#001f35">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="/assets/fonts/manrope-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/manrope-latin-300-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:url" content="https://gaioski.com.br/artigos/travar-tudo-nao-e-seguranca/">
+  <meta property="og:title" content="Travar tudo não é segurança: mapeie o ambiente antes de restringir · Gustavo Gaioski">
+  <meta property="og:description" content="A gestão pediu para travar tudo e a empresa parou. Por que restrição de acesso só funciona depois de mapear o que cada área e cada sistema precisa.">
+  <meta property="og:image" content="https://gaioski.com.br/assets/img/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Travar tudo não é segurança: mapeie o ambiente antes de restringir",
+    "description": "A gestão pediu para travar tudo e a empresa parou. Por que restrição de acesso só funciona depois de mapear o que cada área e cada sistema precisa.",
+    "datePublished": "2026-10-02",
+    "inLanguage": "pt-BR",
+    "mainEntityOfPage": "https://gaioski.com.br/artigos/travar-tudo-nao-e-seguranca/",
+    "url": "https://gaioski.com.br/artigos/travar-tudo-nao-e-seguranca/",
+    "image": "https://gaioski.com.br/assets/img/og-image.jpg",
+    "author": {
+      "@type": "Person",
+      "name": "Gustavo Gaioski",
+      "url": "https://gaioski.com.br/",
+      "jobTitle": "Chief Commercial Officer (CCO)",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "IntekNet",
+        "url": "https://inteknet.com.br/"
+      }
+    },
+    "publisher": {
+      "@type": "Person",
+      "name": "Gustavo Gaioski",
+      "url": "https://gaioski.com.br/",
+      "jobTitle": "Chief Commercial Officer (CCO)",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "IntekNet",
+        "url": "https://inteknet.com.br/"
+      }
+    },
+    "sameAs": [
+      "https://www.linkedin.com/feed/update/urn:li:activity:7511739051981529089/"
+    ]
+  }
+  </script>
+  <script src="/assets/js/site.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="top">
+    <div class="wrap">
+      <a class="brand" href="/" aria-label="Gustavo Gaioski, início">gaioski<span>.</span></a>
+      <nav class="nav" aria-label="Seções">
+        <a href="/#sobre">Sobre</a>
+        <a href="/#rota">Rota</a>
+        <a href="/#atuacao">Atuação</a>
+        <a href="/artigos/" aria-current="page">Artigos</a>
+        <a href="/#contato">Contato</a>
+      </nav>
+      <div class="lang" role="group" aria-label="Idioma">
+        <span aria-current="true" lang="pt-BR">PT</span>
+        <a href="/en/" hreflang="en" lang="en">EN</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <article class="post">
+      <div class="wrap">
+        <header class="post__head">
+          <p class="post__meta"><a href="/artigos/">Artigos</a><span>Segurança</span><time datetime="2026-10-02">2 de outubro de 2026</time></p>
+          <h1>Travar tudo não é segurança: mapeie o ambiente antes de restringir</h1>
+          <p class="post__lede">A gestão pediu para travar tudo e a empresa parou. Por que restrição de acesso só funciona depois de mapear o que cada área e cada sistema precisa.</p>
+        </header>
+        <div class="post__body">
+          <p>&quot;Trava tudo. Ninguém salva nada no computador, ninguém instala nada.&quot;</p>
+          <p>Foi o pedido da gestão num projeto que a gente tocou. Rede nova, computadores gerenciados com Active Directory, e a ordem era clara: o máximo de restrição possível. Bloquear Desktop, Downloads, Imagens, qualquer pasta local. Só salvar na pasta de rede. Nada de instalar programa. Usar só o que já estava no computador.</p>
+          <p>A gente avisou. Restrição pesada assim, num ambiente que ainda não tinha governança, é arriscado. Ninguém tinha mapeado o que cada setor precisa, quais permissões cada sistema exige pra rodar. Travar antes de entender isso podia parar a empresa. A gestão quis seguir mesmo assim.</p>
+          <p>Aplicamos tudo. E a empresa praticamente parou. Setor atrás de setor sem conseguir abrir o software do dia a dia. Sistema que não rodava porque precisava gravar numa pasta local que a gente tinha bloqueado. Um caos. A pressão foi tanta que a gestão ligava de cinco em cinco minutos pedindo exceção.</p>
+          <p>Libera isso. Libera aquilo. O projeto, que tinha prazo, acabou durando o dobro, agora abrindo na marra as portas que a gente tinha fechado sem saber se podia.</p>
+          <p>A lição que ficou: segurança não é o quanto você trava. É o quanto você conhece o seu ambiente antes de travar.</p>
+          <p>Restrição funciona quando vem depois do mapeamento. Você entende o que cada área usa, o que cada sistema precisa, e aí fecha o resto com critério. Pulando essa parte, você não ganha segurança. Ganha chamado, retrabalho e um time que perdeu a confiança na TI.</p>
+          <p>Hoje, quando um cliente pede pra &quot;travar tudo&quot;, a primeira coisa que a gente faz não é travar. É mapear.</p>
+          <p>Na sua empresa, as regras de acesso foram desenhadas a partir do que cada área realmente usa, ou alguém decidiu fechar tudo e ver o que quebrava? Ou ainda não tem nada mapeado e tudo é liberado sem controle?</p>
+        </div>
+        <footer class="post__foot">
+          <p class="signature"><img src="/assets/img/gustavo-480.webp" width="52" height="52" alt="Foto de Gustavo Gaioski" loading="lazy"><span><strong>Gustavo Gaioski</strong><span>CCO · IntekNet</span></span></p>
+          <div class="post__links">
+            <a href="https://www.linkedin.com/feed/update/urn:li:activity:7511739051981529089/" rel="noopener" target="_blank"><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/img/icons.svg?v=2#linkedin"/></svg>Publicado originalmente no LinkedIn<svg class="icon icon--ext" aria-hidden="true" focusable="false"><use href="/assets/img/icons.svg?v=2#arrow-up-right"/></svg></a>
+            <a class="btn" href="/#contato">Vamos conversar</a>
+          </div>
+        </footer>
+      </div>
+    </article>
+
+    <section class="post-more" aria-labelledby="mais-t">
+      <div class="wrap">
+        <p class="label"><b>+</b> Continue lendo</p>
+        <h2 id="mais-t" class="visually-hidden">Outros artigos</h2>
+        <ul class="post-list post-list--compact">
+          <li class="post-card">
+            <p class="post-card__meta"><span>Segurança</span><time datetime="2026-09-30">30 de setembro de 2026</time></p>
+            <h3><a href="/artigos/cofre-de-senhas-corporativo/">A senha que abre a empresa inteira: por que usar um cofre de senhas corporativo</a></h3>
+            <p>Senha repetida e post-it não são preguiça, são falta de ferramenta. Como um cofre de senhas corporativo devolve controle, rastreabilidade e desligamento seguro.</p>
+          </li>
+          <li class="post-card">
+            <p class="post-card__meta"><span>Segurança</span><time datetime="2026-09-10">10 de setembro de 2026</time></p>
+            <h3><a href="/artigos/shadow-it-arquivos-da-empresa/">Shadow IT: quando os arquivos da empresa moram onde não deveriam</a></h3>
+            <p>Contrato no WhatsApp, planilha no pendrive, arquivo no Gmail pessoal. O que é Shadow IT, o risco para a empresa e por que ter Microsoft 365 não basta.</p>
+          </li>
+          <li class="post-card">
+            <p class="post-card__meta"><span>Segurança</span><time datetime="2026-08-19">19 de agosto de 2026</time></p>
+            <h3><a href="/artigos/acesso-condicional-microsoft-365/">Acesso Condicional no Microsoft 365: senha certa não deveria bastar</a></h3>
+            <p>Com a senha certa, a conta entra de qualquer lugar e a qualquer hora. Como o Acesso Condicional do Entra ID avalia o contexto antes de liberar o acesso.</p>
+          </li>
+        </ul>
+        <p class="post-more__all"><a class="link-arrow" href="/artigos/">ver todos os artigos<svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/img/icons.svg?v=2#arrow-right"/></svg></a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap">
+      <span>&copy; 2026 Gustavo Gaioski · Curitiba, PR</span>
+      <span>Feito à mão. Sem cookies, sem rastreadores.</span>
+      <a href="#conteudo">voltar ao topo &uarr;</a>
+    </div>
+  </footer>
+</body>
+</html>

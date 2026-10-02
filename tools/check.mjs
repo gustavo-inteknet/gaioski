@@ -1,6 +1,6 @@
 // Verificador estático do site. Uso: node tools/check.mjs
 // Falha (exit 1) em qualquer violação das regras globais do plano.
-import { readFileSync, existsSync } from 'node:fs';
+import { readFileSync, existsSync, readdirSync } from 'node:fs';
 import { join, dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -74,6 +74,25 @@ for (const { file, lang } of PAGES) {
 
 if (existsSync(join(root, '404.html'))) checkCommon('404.html', read('404.html'));
 else fail('404.html', 'arquivo não existe');
+
+// artigos gerados por tools/build-artigos.mjs
+const artigosDir = join(root, 'artigos');
+if (!existsSync(join(artigosDir, 'index.html'))) fail('artigos/', 'lista de artigos não gerada (rode node tools/build-artigos.mjs)');
+else {
+  const pages = ['artigos/index.html', ...readdirSync(artigosDir, { withFileTypes: true }).filter((d) => d.isDirectory()).map((d) => `artigos/${d.name}/index.html`)];
+  const sm = existsSync(join(root, 'sitemap.xml')) ? read('sitemap.xml') : '';
+  for (const p of pages) {
+    if (!existsSync(join(root, p))) { fail(p, 'arquivo não existe'); continue; }
+    const html = read(p);
+    checkCommon(p, html);
+    if (!html.includes('<html lang="pt-BR"')) fail(p, 'lang deve ser pt-BR');
+    if (!/http-equiv="Content-Security-Policy"/.test(html)) fail(p, 'falta CSP');
+    if (!/rel="canonical"/.test(html)) fail(p, 'falta canonical');
+    if (!/application\/ld\+json/.test(html)) fail(p, 'falta JSON-LD');
+    const loc = 'https://gaioski.com.br/' + p.replace(/index\.html$/, '');
+    if (!sm.includes(`<loc>${loc}</loc>`)) fail('sitemap.xml', `falta ${loc}`);
+  }
+}
 
 const css = existsSync(join(root, 'assets/css/site.css')) ? read('assets/css/site.css') : '';
 if (!css) fail('assets/css/site.css', 'arquivo não existe');

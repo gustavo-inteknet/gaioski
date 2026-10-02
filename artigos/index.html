@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; font-src 'self'; script-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Artigos · Gustavo Gaioski · Infraestrutura, Microsoft 365, segurança e gestão de TI</title>
+  <meta name="description" content="Casos reais e ideias sobre infraestrutura, Microsoft 365, segurança da informação, continuidade e gestão de TI, escritos por Gustavo Gaioski, CCO na IntekNet.">
+  <link rel="canonical" href="https://gaioski.com.br/artigos/">
+  <link rel="alternate" hreflang="pt-BR" href="https://gaioski.com.br/artigos/">
+  <link rel="alternate" hreflang="en" href="https://gaioski.com.br/en/">
+  <link rel="alternate" hreflang="x-default" href="https://gaioski.com.br/artigos/">
+  <meta name="theme-color" content="#001f35">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="/assets/fonts/manrope-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/manrope-latin-300-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:url" content="https://gaioski.com.br/artigos/">
+  <meta property="og:title" content="Artigos · Gustavo Gaioski · Infraestrutura, Microsoft 365, segurança e gestão de TI">
+  <meta property="og:description" content="Casos reais e ideias sobre infraestrutura, Microsoft 365, segurança da informação, continuidade e gestão de TI, escritos por Gustavo Gaioski, CCO na IntekNet.">
+  <meta property="og:image" content="https://gaioski.com.br/assets/img/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "Artigos de Gustavo Gaioski",
+    "url": "https://gaioski.com.br/artigos/",
+    "inLanguage": "pt-BR",
+    "author": {
+      "@type": "Person",
+      "name": "Gustavo Gaioski",
+      "url": "https://gaioski.com.br/",
+      "jobTitle": "Chief Commercial Officer (CCO)",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "IntekNet",
+        "url": "https://inteknet.com.br/"
+      }
+    },
+    "blogPost": [
+      {
+        "@type": "BlogPosting",
+        "headline": "Travar tudo não é segurança: mapeie o ambiente antes de restringir",
+        "url": "https://gaioski.com.br/artigos/travar-tudo-nao-e-seguranca/",
+        "datePublished": "2026-10-02"
+      },
+      {
+        "@type": "BlogPosting",
+        "headline": "A senha que abre a empresa inteira: por que usar um cofre de senhas corporativo",
+        "url": "https://gaioski.com.br/artigos/cofre-de-senhas-corporativo/",
+        "datePublished": "2026-09-30"
+      },
+      {
+        "@type": "BlogPosting",
+        "headline": "Nuvem ou servidor local? A pergunta certa para decidir",
+        "url": "https://gaioski.com.br/artigos/nuvem-ou-servidor-local/",
+        "datePublished": "2026-09-28"
+      },
+      {
+        "@type": "BlogPosting",
+        "headline": "O backup que falhou na hora H: redundância é ter camadas independentes",
+        "url": "https://gaioski.com.br/artigos/backup-que-falhou-redundancia/",
+        "datePublished": "2026-09-25"
+      },
+      {
+        "@type": "BlogPosting",
+        "headline": "Arquivo que não abre no OneDrive: o limite de caminho que ninguém conta",
+        "url": "https://gaioski.com.br/artigos/arquivo-nao-abre-onedrive-limite-caminho/",
+        "datePublished": "2026-09-23"
+      },
+      {
+        "@type": "BlogPosting",
+        "headline": "proposta_final_v2: como acabar com as versões de documento na empresa",
+        "url": "https://gaioski.com.br/artigos/versoes-documento-final-coautoria/",
+        "datePublished": "2026-09-19"
+      },
+      {
+        "@type": "BlogPosting",
+        "headline": "Silêncio não é saúde: 5 sinais de que a TI da sua empresa vai bem",
+        "url": "https://gaioski.com.br/artigos/sinais-ti-saudavel/",
+        "datePublished": "2026-09-16"
+      },
+      {
+        "@type": "BlogPosting",
+        "headline": "A gambiarra que virou fundação: os \"por enquanto\" que seguram a empresa",
+        "url": "https://gaioski.com.br/artigos/gambiarra-que-virou-fundacao/",
+        "datePublished": "2026-09-11"
+      },
+      {
+        "@type": "BlogPosting",
+        "headline": "Shadow IT: quando os arquivos da empresa moram onde não deveriam",
+        "url": "https://gaioski.com.br/artigos/shadow-it-arquivos-da-empresa/",
+        "datePublished": "2026-09-10"
+      },
+      {
+        "@type": "BlogPosting",
+        "headline": "Onboarding de TI: o funcionário novo trabalha no primeiro dia?",
+        "url": "https://gaioski.com.br/artigos/onboarding-ti-primeiro-dia/",
+        "datePublished": "2026-09-09"
+      },
+      {
+        "@type": "BlogPosting",
+        "headline": "Automação no Microsoft 365: o trabalho manual que você já paga para eliminar",
+        "url": "https://gaioski.com.br/artigos/automacao-microsoft-365-trabalho-manual/",
+        "datePublished": "2026-09-02"
+      },
+      {
+        "@type": "BlogPosting",
+        "headline": "O Teams virou WhatsApp corporativo? Como organizar a colaboração",
+        "url": "https://gaioski.com.br/artigos/teams-whatsapp-corporativo/",
+        "datePublished": "2026-08-31"
+      },
+      {
+        "@type": "BlogPosting",
+        "headline": "Copilot e IA na empresa: antes da IA, organize quem acessa o quê",
+        "url": "https://gaioski.com.br/artigos/copilot-ia-permissoes-microsoft-365/",
+        "datePublished": "2026-08-28"
+      },
+      {
+        "@type": "BlogPosting",
+        "headline": "Quanto custa a TI lenta? A conta das horas perdidas todo mês",
+        "url": "https://gaioski.com.br/artigos/custo-da-ti-lenta/",
+        "datePublished": "2026-08-27"
+      },
+      {
+        "@type": "BlogPosting",
+        "headline": "Wi-Fi corporativo sem senha compartilhada: login com Microsoft 365 e rastreabilidade",
+        "url": "https://gaioski.com.br/artigos/wifi-corporativo-sem-senha-compartilhada/",
+        "datePublished": "2026-08-21"
+      },
+      {
+        "@type": "BlogPosting",
+        "headline": "Acesso Condicional no Microsoft 365: senha certa não deveria bastar",
+        "url": "https://gaioski.com.br/artigos/acesso-condicional-microsoft-365/",
+        "datePublished": "2026-08-19"
+      },
+      {
+        "@type": "BlogPosting",
+        "headline": "Você sabe explicar a fatura do Microsoft 365 da sua empresa?",
+        "url": "https://gaioski.com.br/artigos/fatura-microsoft-365-gestao-licencas/",
+        "datePublished": "2026-08-17"
+      },
+      {
+        "@type": "BlogPosting",
+        "headline": "Uma conta de Dropbox para a empresa toda: o caso de uma construtora",
+        "url": "https://gaioski.com.br/artigos/dropbox-compartilhado-construtora-microsoft-365/",
+        "datePublished": "2026-08-14"
+      },
+      {
+        "@type": "BlogPosting",
+        "headline": "Microsoft 365 na indústria: o que encontramos quando abrimos o ambiente",
+        "url": "https://gaioski.com.br/artigos/microsoft-365-industria-configuracao/",
+        "datePublished": "2026-08-12"
+      },
+      {
+        "@type": "BlogPosting",
+        "headline": "O maior ativo da empresa não está no servidor",
+        "url": "https://gaioski.com.br/artigos/informacao-maior-ativo-da-empresa/",
+        "datePublished": "2026-08-10"
+      },
+      {
+        "@type": "BlogPosting",
+        "headline": "Antes de migrar para o Microsoft 365, descubra o que realmente existe",
+        "url": "https://gaioski.com.br/artigos/migracao-microsoft-365-levantamento-do-ambiente/",
+        "datePublished": "2026-08-07"
+      },
+      {
+        "@type": "BlogPosting",
+        "headline": "Business ou Enterprise? Como escolher a licença Microsoft 365",
+        "url": "https://gaioski.com.br/artigos/licenca-microsoft-365-business-ou-enterprise/",
+        "datePublished": "2026-08-05"
+      }
+    ]
+  }
+  </script>
+  <script src="/assets/js/site.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="top">
+    <div class="wrap">
+      <a class="brand" href="/" aria-label="Gustavo Gaioski, início">gaioski<span>.</span></a>
+      <nav class="nav" aria-label="Seções">
+        <a href="/#sobre">Sobre</a>
+        <a href="/#rota">Rota</a>
+        <a href="/#atuacao">Atuação</a>
+        <a href="/artigos/" aria-current="page">Artigos</a>
+        <a href="/#contato">Contato</a>
+      </nav>
+      <div class="lang" role="group" aria-label="Idioma">
+        <span aria-current="true" lang="pt-BR">PT</span>
+        <a href="/en/" hreflang="en" lang="en">EN</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="posts-hero" aria-labelledby="artigos-t">
+      <div class="wrap">
+        <p class="label"><b>22</b> Artigos</p>
+        <h1 id="artigos-t">O que a operação me ensinou, <em>escrito para quem decide.</em></h1>
+        <p class="posts-hero__lede">Casos reais e ideias sobre infraestrutura, Microsoft 365, segurança e gestão de TI. Publicados primeiro no LinkedIn, reunidos aqui.</p>
+        <p class="post-tags"><span>Segurança</span><span>Infraestrutura</span><span>Continuidade</span><span>Microsoft 365</span><span>Gestão de TI</span><span>IA e governança</span><span>Redes</span></p>
+      </div>
+    </section>
+    <section class="posts" aria-label="Lista de artigos">
+      <div class="wrap">
+        <ul class="post-list">
+          <li class="post-card">
+            <p class="post-card__meta"><span>Segurança</span><time datetime="2026-10-02">2 de outubro de 2026</time></p>
+            <h3><a href="/artigos/travar-tudo-nao-e-seguranca/">Travar tudo não é segurança: mapeie o ambiente antes de restringir</a></h3>
+            <p>A gestão pediu para travar tudo e a empresa parou. Por que restrição de acesso só funciona depois de mapear o que cada área e cada sistema precisa.</p>
+          </li>
+          <li class="post-card">
+            <p class="post-card__meta"><span>Segurança</span><time datetime="2026-09-30">30 de setembro de 2026</time></p>
+            <h3><a href="/artigos/cofre-de-senhas-corporativo/">A senha que abre a empresa inteira: por que usar um cofre de senhas corporativo</a></h3>
+            <p>Senha repetida e post-it não são preguiça, são falta de ferramenta. Como um cofre de senhas corporativo devolve controle, rastreabilidade e desligamento seguro.</p>
+          </li>
+          <li class="post-card">
+            <p class="post-card__meta"><span>Infraestrutura</span><time datetime="2026-09-28">28 de setembro de 2026</time></p>
+            <h3><a href="/artigos/nuvem-ou-servidor-local/">Nuvem ou servidor local? A pergunta certa para decidir</a></h3>
+            <p>&quot;Vamos jogar tudo na nuvem&quot; vira bandeira e atrapalha a decisão. Como escolher entre nuvem, servidor local ou ambiente híbrido pela necessidade de cada carga.</p>
+          </li>
+          <li class="post-card">
+            <p class="post-card__meta"><span>Continuidade</span><time datetime="2026-09-25">25 de setembro de 2026</time></p>
+            <h3><a href="/artigos/backup-que-falhou-redundancia/">O backup que falhou na hora H: redundância é ter camadas independentes</a></h3>
+            <p>Um disco avisou que ia falhar, a troca foi adiada e o backup testado todo mês não restaurou. O caso real que mostra por que um backup só é aposta.</p>
+          </li>
+          <li class="post-card">
+            <p class="post-card__meta"><span>Microsoft 365</span><time datetime="2026-09-23">23 de setembro de 2026</time></p>
+            <h3><a href="/artigos/arquivo-nao-abre-onedrive-limite-caminho/">Arquivo que não abre no OneDrive: o limite de caminho que ninguém conta</a></h3>
+            <p>O arquivo abre no navegador e não abre no computador. Na nuvem o caminho cabe; sincronizado no Windows, não. Por que migrar exige redesenhar a estrutura.</p>
+          </li>
+          <li class="post-card">
+            <p class="post-card__meta"><span>Microsoft 365</span><time datetime="2026-09-19">19 de setembro de 2026</time></p>
+            <h3><a href="/artigos/versoes-documento-final-coautoria/">proposta_final_v2: como acabar com as versões de documento na empresa</a></h3>
+            <p>Cinco arquivos de &quot;documento final&quot; e ninguém sabe qual é o certo. Como a coautoria do Microsoft 365 Business resolve isso sem custo a mais.</p>
+          </li>
+          <li class="post-card">
+            <p class="post-card__meta"><span>Gestão de TI</span><time datetime="2026-09-16">16 de setembro de 2026</time></p>
+            <h3><a href="/artigos/sinais-ti-saudavel/">Silêncio não é saúde: 5 sinais de que a TI da sua empresa vai bem</a></h3>
+            <p>Anos sem incidente podem ser sorte, não gestão. Cinco sinais práticos para saber se a TI da empresa saiu do modo apaga-incêndio.</p>
+          </li>
+          <li class="post-card">
+            <p class="post-card__meta"><span>Infraestrutura</span><time datetime="2026-09-11">11 de setembro de 2026</time></p>
+            <h3><a href="/artigos/gambiarra-que-virou-fundacao/">A gambiarra que virou fundação: os &quot;por enquanto&quot; que seguram a empresa</a></h3>
+            <p>O script de 2019 que roda o faturamento, a planilha que só abre num computador, o PC embaixo da mesa. Como achar as peças frágeis antes que elas quebrem.</p>
+          </li>
+          <li class="post-card">
+            <p class="post-card__meta"><span>Segurança</span><time datetime="2026-09-10">10 de setembro de 2026</time></p>
+            <h3><a href="/artigos/shadow-it-arquivos-da-empresa/">Shadow IT: quando os arquivos da empresa moram onde não deveriam</a></h3>
+            <p>Contrato no WhatsApp, planilha no pendrive, arquivo no Gmail pessoal. O que é Shadow IT, o risco para a empresa e por que ter Microsoft 365 não basta.</p>
+          </li>
+          <li class="post-card">
+            <p class="post-card__meta"><span>Gestão de TI</span><time datetime="2026-09-09">9 de setembro de 2026</time></p>
+            <h3><a href="/artigos/onboarding-ti-primeiro-dia/">Onboarding de TI: o funcionário novo trabalha no primeiro dia?</a></h3>
+            <p>Computador não pronto, e-mail não criado, acessos &quot;depois&quot;. Por que onboarding é processo de TI e como ele evita produtividade perdida e risco de segurança.</p>
+          </li>
+          <li class="post-card">
+            <p class="post-card__meta"><span>Microsoft 365</span><time datetime="2026-09-02">2 de setembro de 2026</time></p>
+            <h3><a href="/artigos/automacao-microsoft-365-trabalho-manual/">Automação no Microsoft 365: o trabalho manual que você já paga para eliminar</a></h3>
+            <p>Pedido em planilha, digitação repetida, cobrança por e-mail. Como montar fluxos automáticos com o que já vem no Microsoft 365, sem projeto de meses.</p>
+          </li>
+          <li class="post-card">
+            <p class="post-card__meta"><span>Microsoft 365</span><time datetime="2026-08-31">31 de agosto de 2026</time></p>
+            <h3><a href="/artigos/teams-whatsapp-corporativo/">O Teams virou WhatsApp corporativo? Como organizar a colaboração</a></h3>
+            <p>Decisão perdida no chat, arquivo enviado três vezes, um grupo para cada assunto. As três definições que transformam o Teams em estrutura de colaboração.</p>
+          </li>
+          <li class="post-card">
+            <p class="post-card__meta"><span>IA e governança</span><time datetime="2026-08-28">28 de agosto de 2026</time></p>
+            <h3><a href="/artigos/copilot-ia-permissoes-microsoft-365/">Copilot e IA na empresa: antes da IA, organize quem acessa o quê</a></h3>
+            <p>O Copilot respeita as permissões que o usuário já tem. Se ninguém organizou quem acessa o quê, a IA só deixa a bagunça mais fácil de consultar.</p>
+          </li>
+          <li class="post-card">
+            <p class="post-card__meta"><span>Gestão de TI</span><time datetime="2026-08-27">27 de agosto de 2026</time></p>
+            <h3><a href="/artigos/custo-da-ti-lenta/">Quanto custa a TI lenta? A conta das horas perdidas todo mês</a></h3>
+            <p>20 minutos por dia de computador lento viram 200 horas por mês numa equipe de 30 pessoas. Como a gestão de TI encontra o gargalo antes da compra no desespero.</p>
+          </li>
+          <li class="post-card">
+            <p class="post-card__meta"><span>Redes</span><time datetime="2026-08-21">21 de agosto de 2026</time></p>
+            <h3><a href="/artigos/wifi-corporativo-sem-senha-compartilhada/">Wi-Fi corporativo sem senha compartilhada: login com Microsoft 365 e rastreabilidade</a></h3>
+            <p>Na IntekNet ninguém sabe a senha do Wi-Fi, de propósito. Como o acesso com login do Microsoft 365 acaba com a rede anônima e traz rastreabilidade.</p>
+          </li>
+          <li class="post-card">
+            <p class="post-card__meta"><span>Segurança</span><time datetime="2026-08-19">19 de agosto de 2026</time></p>
+            <h3><a href="/artigos/acesso-condicional-microsoft-365/">Acesso Condicional no Microsoft 365: senha certa não deveria bastar</a></h3>
+            <p>Com a senha certa, a conta entra de qualquer lugar e a qualquer hora. Como o Acesso Condicional do Entra ID avalia o contexto antes de liberar o acesso.</p>
+          </li>
+          <li class="post-card">
+            <p class="post-card__meta"><span>Microsoft 365</span><time datetime="2026-08-17">17 de agosto de 2026</time></p>
+            <h3><a href="/artigos/fatura-microsoft-365-gestao-licencas/">Você sabe explicar a fatura do Microsoft 365 da sua empresa?</a></h3>
+            <p>O problema quase nunca é pagar muito, é não ter gestão sobre o que se paga. As perguntas para revisar licenças, recursos inclusos e o que nunca foi ligado.</p>
+          </li>
+          <li class="post-card">
+            <p class="post-card__meta"><span>Segurança</span><time datetime="2026-08-14">14 de agosto de 2026</time></p>
+            <h3><a href="/artigos/dropbox-compartilhado-construtora-microsoft-365/">Uma conta de Dropbox para a empresa toda: o caso de uma construtora</a></h3>
+            <p>Uma construtora trabalhava com uma única conta de Dropbox e a mesma senha para todos. Como Microsoft 365 com Intune devolveu o controle sobre os projetos.</p>
+          </li>
+          <li class="post-card">
+            <p class="post-card__meta"><span>Microsoft 365</span><time datetime="2026-08-12">12 de agosto de 2026</time></p>
+            <h3><a href="/artigos/microsoft-365-industria-configuracao/">Microsoft 365 na indústria: o que encontramos quando abrimos o ambiente</a></h3>
+            <p>Configurado às pressas, funciona e ninguém volta para olhar. Os problemas que quase sempre aparecem no Microsoft 365 de indústrias e por que custam caro.</p>
+          </li>
+          <li class="post-card">
+            <p class="post-card__meta"><span>Segurança</span><time datetime="2026-08-10">10 de agosto de 2026</time></p>
+            <h3><a href="/artigos/informacao-maior-ativo-da-empresa/">O maior ativo da empresa não está no servidor</a></h3>
+            <p>Proteger a empresa já foi proteger o servidor. Hoje o que mantém o negócio de pé é a informação espalhada na nuvem, e sem controle ela vira risco.</p>
+          </li>
+          <li class="post-card">
+            <p class="post-card__meta"><span>Microsoft 365</span><time datetime="2026-08-07">7 de agosto de 2026</time></p>
+            <h3><a href="/artigos/migracao-microsoft-365-levantamento-do-ambiente/">Antes de migrar para o Microsoft 365, descubra o que realmente existe</a></h3>
+            <p>E-mail na Locaweb, arquivos no Google Drive e no OneDrive pessoal, nenhum inventário. Um caso real de migração que começou pelo levantamento do ambiente.</p>
+          </li>
+          <li class="post-card">
+            <p class="post-card__meta"><span>Microsoft 365</span><time datetime="2026-08-05">5 de agosto de 2026</time></p>
+            <h3><a href="/artigos/licenca-microsoft-365-business-ou-enterprise/">Business ou Enterprise? Como escolher a licença Microsoft 365</a></h3>
+            <p>Pagar por recurso que não usa ou ficar numa licença que não atende. O limite de 300 usuários da linha Business e como escolher a licença certa.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap">
+      <span>&copy; 2026 Gustavo Gaioski · Curitiba, PR</span>
+      <span>Feito à mão. Sem cookies, sem rastreadores.</span>
+      <a href="#conteudo">voltar ao topo &uarr;</a>
+    </div>
+  </footer>
+</body>
+</html>

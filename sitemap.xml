@@ -2,16 +2,108 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://gaioski.com.br/</loc>
-    <lastmod>2026-09-25</lastmod>
+    <lastmod>2026-10-02</lastmod>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://gaioski.com.br/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://gaioski.com.br/en/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://gaioski.com.br/"/>
   </url>
   <url>
     <loc>https://gaioski.com.br/en/</loc>
-    <lastmod>2026-09-25</lastmod>
+    <lastmod>2026-10-02</lastmod>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://gaioski.com.br/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://gaioski.com.br/en/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://gaioski.com.br/"/>
+  </url>
+  <url>
+    <loc>https://gaioski.com.br/artigos/</loc>
+    <lastmod>2026-10-02</lastmod>
+  </url>
+  <url>
+    <loc>https://gaioski.com.br/artigos/travar-tudo-nao-e-seguranca/</loc>
+    <lastmod>2026-10-02</lastmod>
+  </url>
+  <url>
+    <loc>https://gaioski.com.br/artigos/cofre-de-senhas-corporativo/</loc>
+    <lastmod>2026-09-30</lastmod>
+  </url>
+  <url>
+    <loc>https://gaioski.com.br/artigos/nuvem-ou-servidor-local/</loc>
+    <lastmod>2026-09-28</lastmod>
+  </url>
+  <url>
+    <loc>https://gaioski.com.br/artigos/backup-que-falhou-redundancia/</loc>
+    <lastmod>2026-09-25</lastmod>
+  </url>
+  <url>
+    <loc>https://gaioski.com.br/artigos/arquivo-nao-abre-onedrive-limite-caminho/</loc>
+    <lastmod>2026-09-23</lastmod>
+  </url>
+  <url>
+    <loc>https://gaioski.com.br/artigos/versoes-documento-final-coautoria/</loc>
+    <lastmod>2026-09-19</lastmod>
+  </url>
+  <url>
+    <loc>https://gaioski.com.br/artigos/sinais-ti-saudavel/</loc>
+    <lastmod>2026-09-16</lastmod>
+  </url>
+  <url>
+    <loc>https://gaioski.com.br/artigos/gambiarra-que-virou-fundacao/</loc>
+    <lastmod>2026-09-11</lastmod>
+  </url>
+  <url>
+    <loc>https://gaioski.com.br/artigos/shadow-it-arquivos-da-empresa/</loc>
+    <lastmod>2026-09-10</lastmod>
+  </url>
+  <url>
+    <loc>https://gaioski.com.br/artigos/onboarding-ti-primeiro-dia/</loc>
+    <lastmod>2026-09-09</lastmod>
+  </url>
+  <url>
+    <loc>https://gaioski.com.br/artigos/automacao-microsoft-365-trabalho-manual/</loc>
+    <lastmod>2026-09-02</lastmod>
+  </url>
+  <url>
+    <loc>https://gaioski.com.br/artigos/teams-whatsapp-corporativo/</loc>
+    <lastmod>2026-08-31</lastmod>
+  </url>
+  <url>
+    <loc>https://gaioski.com.br/artigos/copilot-ia-permissoes-microsoft-365/</loc>
+    <lastmod>2026-08-28</lastmod>
+  </url>
+  <url>
+    <loc>https://gaioski.com.br/artigos/custo-da-ti-lenta/</loc>
+    <lastmod>2026-08-27</lastmod>
+  </url>
+  <url>
+    <loc>https://gaioski.com.br/artigos/wifi-corporativo-sem-senha-compartilhada/</loc>
+    <lastmod>2026-08-21</lastmod>
+  </url>
+  <url>
+    <loc>https://gaioski.com.br/artigos/acesso-condicional-microsoft-365/</loc>
+    <lastmod>2026-08-19</lastmod>
+  </url>
+  <url>
+    <loc>https://gaioski.com.br/artigos/fatura-microsoft-365-gestao-licencas/</loc>
+    <lastmod>2026-08-17</lastmod>
+  </url>
+  <url>
+    <loc>https://gaioski.com.br/artigos/dropbox-compartilhado-construtora-microsoft-365/</loc>
+    <lastmod>2026-08-14</lastmod>
+  </url>
+  <url>
+    <loc>https://gaioski.com.br/artigos/microsoft-365-industria-configuracao/</loc>
+    <lastmod>2026-08-12</lastmod>
+  </url>
+  <url>
+    <loc>https://gaioski.com.br/artigos/informacao-maior-ativo-da-empresa/</loc>
+    <lastmod>2026-08-10</lastmod>
+  </url>
+  <url>
+    <loc>https://gaioski.com.br/artigos/migracao-microsoft-365-levantamento-do-ambiente/</loc>
+    <lastmod>2026-08-07</lastmod>
+  </url>
+  <url>
+    <loc>https://gaioski.com.br/artigos/licenca-microsoft-365-business-ou-enterprise/</loc>
+    <lastmod>2026-08-05</lastmod>
   </url>
 </urlset>
