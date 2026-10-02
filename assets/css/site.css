@@ -794,3 +794,22 @@ body {
 .voices blockquote p { margin: 0; font: italic 400 1.08rem/1.6 var(--italic); color: var(--ink); max-width: 52ch; }
 .voices__list span { font: 400 .75rem var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--accent); }
 @media (max-width: 760px) { .voices__list { grid-template-columns: 1fr; } }
+
+/* liderança: antes → depois */
+.area__shift { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); gap: 0 1rem; align-items: stretch; margin: 1.3rem 0 0; }
+.area__shift div { padding: .9rem 1rem; border-radius: 10px; border: 1px solid var(--line); background: color-mix(in srgb, var(--ink) 2.5%, transparent); }
+.area__shift div:last-child { border-color: color-mix(in srgb, var(--accent) 45%, var(--line)); background: color-mix(in srgb, var(--accent-deep) 8%, transparent); }
+.area__shift div:first-child::after { content: ""; }
+.area__shift::before { content: "\2192"; grid-column: 2; grid-row: 1; align-self: center; font: 400 1.1rem var(--mono); color: var(--accent); }
+.area__shift div:first-child { grid-column: 1; grid-row: 1; }
+.area__shift div:last-child { grid-column: 3; grid-row: 1; }
+.area__shift dt { font: 500 .75rem var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3); }
+.area__shift div:last-child dt { color: var(--accent); }
+.area__shift dd { margin: .35rem 0 0; font-size: .95rem; line-height: 1.5; color: var(--ink-2); }
+.area__shift div:last-child dd { color: var(--ink); font-weight: 500; }
+@media (max-width: 760px) {
+  .area__shift { grid-template-columns: 1fr; gap: .5rem; }
+  .area__shift::before { grid-column: 1; grid-row: 2; justify-self: center; transform: rotate(90deg); }
+  .area__shift div:first-child { grid-column: 1; grid-row: 1; }
+  .area__shift div:last-child { grid-column: 1; grid-row: 3; }
+}
