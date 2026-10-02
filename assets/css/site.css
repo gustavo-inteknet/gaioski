@@ -813,3 +813,7 @@ body {
   .area__shift div:first-child { grid-column: 1; grid-row: 1; }
   .area__shift div:last-child { grid-column: 1; grid-row: 3; }
 }
+
+/* rota: o que cada fase técnica deixou para a liderança */
+.hop__lesson { margin: .9rem 0 .3rem; padding: .8rem 1rem; border-radius: 10px; border: 1px solid color-mix(in srgb, var(--accent) 35%, var(--line)); background: color-mix(in srgb, var(--accent-deep) 7%, transparent); font: italic 400 1rem/1.5 var(--italic); color: var(--ink); max-width: 64ch; }
+.hop__lesson span { display: block; margin-bottom: .25rem; font: 500 .75rem var(--mono); font-style: normal; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); }
